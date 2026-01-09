@@ -46,4 +46,9 @@ public class ProductRepository {
         map.remove(id);
     }
 
+    public List<Product> findAll(){
+    return new ArrayList<>(map.values());
+    }
+
 }
+
