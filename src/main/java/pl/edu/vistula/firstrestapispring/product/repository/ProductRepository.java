@@ -33,10 +33,6 @@ public class ProductRepository {
         return entity;
     }
 
-    public void delete(Long id) {
-        map.remove(id);
-    }
-
     public Optional<Product> find(Long id) {
         return Optional.ofNullable(map.get(id));
     }
@@ -51,4 +47,5 @@ public class ProductRepository {
     }
 
 }
+
 
