@@ -44,6 +44,11 @@ public class ProductService {
 
         productRepository.deleteById(product.getId());
     }
-
-
+    
+    public List<ProductResponse> findAll(){
+       return productRepository.findAll().stream()
+         .map(productMapper::toProductResponse)
+         .collect(Collectors.toList());
+         }
+    
 }
