@@ -35,6 +35,7 @@ public class ProductController {
     }
 
     @PostMapping
+    @Operation(summary = "Create product")
     public ResponseEntity<ProductResponse> create(@RequestBody ProductRequest productRequest) {
         ProductResponse productResponse = productService.create(productRequest);
         return new ResponseEntity<>(productResponse, HttpStatus.CREATED);
@@ -52,14 +53,13 @@ public class ProductController {
         return ResponseEntity.status(HttpStatus.OK).body(productResponse);
     }
     @GetMapping
-    @Operation(summary = "Find all products")
+    @Operation(summary = "Get all products")
     public ResponseEntity<List<ProductResponse>> findAll() {
         List<ProductResponse> productResponses = productService.findAll();
         return ResponseEntity.status(HttpStatus.OK).body(productResponses);
+    }
+  
 }
 
-
-    
-}
 
 
