@@ -51,5 +51,15 @@ public class ProductController {
         ProductResponse productResponse = productService.update(id, updateProductRequest);
         return ResponseEntity.status(HttpStatus.OK).body(productResponse);
     }
+    @GetMapping
+    @Operation(summary = "Find all products")
+    public ResponseEntity<List<ProductResponse>> findAll() {
+        List<ProductResponse> productResponses = productService.findAll();
+        return ResponseEntity.status(HttpStatus.OK).body(productResponses);
 }
+
+
+    
+}
+
 
