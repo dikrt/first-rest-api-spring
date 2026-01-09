@@ -8,6 +8,8 @@ import pl.edu.vistula.firstrestapispring.product.repository.ProductRepository;
 import pl.edu.vistula.firstrestapispring.product.support.ProductExceptionSupplier;
 import pl.edu.vistula.firstrestapispring.product.support.ProductMapper;
 import pl.edu.vistula.firstrestapispring.product.api.Request.UpdateProductRequest;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class ProductService {
@@ -52,3 +54,4 @@ public class ProductService {
          }
     
 }
+
