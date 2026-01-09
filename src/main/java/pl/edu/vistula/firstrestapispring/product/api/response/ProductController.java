@@ -14,7 +14,7 @@ import pl.edu.vistula.firstrestapispring.product.api.Request.ProductRequest;
 import pl.edu.vistula.firstrestapispring.product.service.ProductService;
 import org.springframework.web.bind.annotation.PutMapping;
 import pl.edu.vistula.firstrestapispring.product.api.Request.UpdateProductRequest;
-
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/products")
@@ -60,6 +60,7 @@ public class ProductController {
     }
   
 }
+
 
 
 
